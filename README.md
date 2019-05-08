@@ -1,2 +1,2 @@
-# <codec.trembl.org>
-Wordpress Theme for <codec.trembl.org>
+# <https://codec.trembl.org>
+Wordpress Theme for <https://codec.trembl.org>
