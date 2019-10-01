@@ -16,14 +16,16 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/prism.css">
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/prism.js"></script>
 
+<!--
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
-<script type="text/javascript" src="http://use.typekit.com/quk8pbh.js"></script>
+<script type="text/javascript" src="https://use.typekit.com/quk8pbh.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+-->
 </head>
 <body>
   <div id="page">
     <div id="header">
-      <div id="description"><a href="http://www.trembl.org/">➜☠←trembl</a> A polylogic polysemantic Memex, a pseudo-xanalogical 'Zettelkasten'</div>
+      <div id="description"><a href="https://www.trembl.org/">➜☠←trembl</a> A polylogic polysemantic Memex, a pseudo-xanalogical 'Zettelkasten'</div>
       <div id="title">
         <form method="get" id="searchform" action="<?php echo home_url(); ?>">
           <input type="text" value="Codec" name="s" id="searchinput" onfocus="if (this.value == 'Codec') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Codec';}" /><input type="submit" id="searchsubmit" value="↩" />

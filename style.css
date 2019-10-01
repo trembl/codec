@@ -1,11 +1,11 @@
 /*
 Theme Name: Minimal Codec
-Theme URI: 
-Description: 
+Theme URI:
+Description:
 Version:
-Author: 
-Author URI: 
-Tags: 
+Author:
+Author URI:
+Tags:
 */
 
 
@@ -17,7 +17,6 @@ body {
   font-family: ff-meta-serif-web-pro-1, ff-meta-serif-web-pro-2, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
   font-weight: 500;
   font-style: normal;
-/*  background: url("http://www.trembl.org/i/background/coredata.png") scroll -10px -10px; */
   color: #333;
   text-align: center;
   margin: 0 0 20px 0;
@@ -100,7 +99,6 @@ h1, h2, h3, #header {
 }
 
 #header #searchform #searchinput {
-  background: url("http://www.trembl.org/i/background/coredata.png") scroll;
   width: 600px;
   padding: 0;
   margin: 15px 0;
@@ -208,7 +206,7 @@ acronym, abbr, span.caps {
   color: #ccc;
   text-align: center;
   font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-  
+
 }
 
 /* End Structure */
@@ -458,4 +456,3 @@ code .number {
   font-style: italic;
   font-size: 0.8em;
 }
-
