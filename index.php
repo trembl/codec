@@ -6,23 +6,28 @@
       <h2>
         <span class="gray id"><?php /* the_time('F jS, Y') */ the_ID(); ?></span><a href="<?php the_permalink() ?>"><?php the_title(); ?></a><span class="edit"><?php edit_post_link('░', '', ''); ?></span>
       </h2>
-      
+
       <div class="entry">
-        <?php the_content(); ?>
+<?php
+
+if (get_field('enable_markdown_filter')) {
+  the_markdown_content();
+} else {
+  the_content();
+}
+?>
+
       </div>
 
-      <div class="tags">
-        <?php the_tags('', ' ', ''); ?>
-      
-      </div>
-        
+      <div class="tags"><?php the_tags('', ' ', ''); ?></div>
+
       <?php
       // related
         $tags = wp_get_post_tags($post->ID);
         if ($tags) {
           $tag_ids = array();
           foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
-        
+
           $args = array(
             'tag__in'          => $tag_ids,
             'post__not_in'     => array($post->ID),
@@ -39,9 +44,9 @@
             echo "\t\t\t" . '</div>';
           }
         }
-      
+
        ?>
-        
+
     </div>
 
 
