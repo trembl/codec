@@ -153,7 +153,7 @@ small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockqu
 }
 
 code {
-  font: 1.1em 'Menlo', 'Courier New', Courier, Fixed;
+  font: 1.0em 'Menlo', 'Courier New', Courier, Fixed;
   background: #f2efec;
 }
 
