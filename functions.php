@@ -27,6 +27,20 @@ function disable_autosave() {
 }
 add_action('wp_print_scripts', 'disable_autosave');
 
+// Disable Related Posts in Sidebar
+function display_related($class="related") {
+?>
+  <li class="<?php echo $class; ?>"><strong><span class="id gray"><?php the_ID(); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></strong>
+  <div class="tags"><?php $posttags = get_the_tags($post->ID);
+    if ($posttags) {
+      foreach($posttags as $tag) {
+        echo '<a href="' . site_url() . '/tag/' . str_replace(" ", "-", $tag->name) . '/">' . str_replace(array(" ", "-"), array("&nbsp;", "&#8209;"), $tag->name) . "</a> " ;
+      }
+    }
+  ?></div>
+  </li>
+<?php
+}
 
 // Include Markdown Parser
 include('includes/Parsedown.php');
