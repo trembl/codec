@@ -9,16 +9,8 @@
 
     <div class="entry">
 <?php
-
-
-//if (get_field('enable_markdown_filter')) {
   the_markdown_content();
-//} else {
-//  the_content();
-//}
-
 ?>
-
     </div>
 
     <div class="tags"><?php the_tags('', ' ', ''); ?></div>
@@ -29,7 +21,6 @@
   if ($tags) {
     $tag_ids = array();
     foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
-
     $args = array(
       'tag__in'          => $tag_ids,
       'post__not_in'     => array($post->ID),
