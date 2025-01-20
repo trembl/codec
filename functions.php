@@ -42,6 +42,22 @@ function display_related($class="related") {
 <?php
 }
 
+// Disable Public Access to WP-JSON
+// https://stackoverflow.com/questions/41191655/safely-disable-wp-rest-api
+add_filter('rest_authentication_errors', function($result) {
+  if (true === $result || is_wp_error($result)) {
+    return $result;
+  }
+  if (!is_user_logged_in()) {
+    global $wp_query;
+    $wp_query->set_404();
+    status_header(404);
+    get_template_part(404);
+    exit();
+  }
+  return $result;
+});
+
 // Include Markdown Parser
 include('includes/Parsedown.php');
 $Parsedown = new Parsedown();
